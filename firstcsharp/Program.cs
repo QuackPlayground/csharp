@@ -6,28 +6,18 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            string randString = "This is a string";
-            Console.WriteLine("String Length: {0}", randString.Length);
-            Console.WriteLine("String Contains is: {0}", randString.Contains("is"));
-            Console.WriteLine("Index of is: {0}", randString.IndexOf("is"));
-            Console.WriteLine("Remove String: {0}", randString.Remove(10, 6));
-            Console.WriteLine("Insert String: {0}", randString.Insert(10, "short")); // insert in index 10 -> word "short"
-            Console.WriteLine("Replace String: {0}", randString.Replace("string", "sentence")); // replace "string" with "sentence"
-            Console.WriteLine("Compare A to B: {0}", String.Compare("A", "B", StringComparison.OrdinalIgnoreCase)); // dengan mengabaikan perbedaan huruf besar-kecil (case-insensitive).
+            int[] favNums = new int[3];
+            favNums[0] = 23;
+            Console.WriteLine("favNum at index 0: {0}", favNums[0]);
 
-            Console.WriteLine("----------------------");
+            string[] customers = { "Bob", "Sally", "Sue" };
+            var employees = new[] { "Mike", "Paul", "Rick" };
 
-            Console.WriteLine("A = a: {0}", String.Equals("A", "a", StringComparison.OrdinalIgnoreCase));
-            Console.WriteLine("Pad Left: {0}", randString.PadLeft(20, '.'));
-            Console.WriteLine("Pad Right: {0}", randString.PadRight(20, '.'));
-            Console.WriteLine("Trim : {0}", randString.Trim());
-            Console.WriteLine("Uppercase: {0}", randString.ToUpper());
-            Console.WriteLine("Lowercase: {0}", randString.ToLower());
+            // array for different types with object
+            object[] randomArray = { "Paul", 45, 1.234 };
 
-            string newString = String.Format("{0} saw a {1} {2} in the {3}", "Paul", "rabbit", "eating", "field");
-            Console.Write(newString + "\n");
-
-            Console.WriteLine(@"Exactly what I type\n");
+            Console.WriteLine("randomArray 0: {0}", randomArray[0].GetType());
+            Console.WriteLine("Array Size: {0}", randomArray.Length);
         }
     }
 }
