@@ -23,6 +23,11 @@ namespace ConsoleApp1
             Console.WriteLine("Trim : {0}", randString.Trim());
             Console.WriteLine("Uppercase: {0}", randString.ToUpper());
             Console.WriteLine("Lowercase: {0}", randString.ToLower());
+
+            string newString = String.Format("{0} saw a {1} {2} in the {3}", "Paul", "rabbit", "eating", "field");
+            Console.Write(newString + "\n");
+
+            Console.WriteLine(@"Exactly what I type\n");
         }
     }
 }
