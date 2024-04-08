@@ -6,13 +6,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            
+            Console.Write("What is your name? ");
+            string name = Console.ReadLine();
 
-            Console.ForegroundColor = ConsoleColor.Black;
-            Console.BackgroundColor = ConsoleColor.White;
-            Console.Clear(); // for background to be applied in all in the windows
-
-            Console.WriteLine("Hello World!!");
+            Console.WriteLine($"Hello {name}");
         }
     }
 }
