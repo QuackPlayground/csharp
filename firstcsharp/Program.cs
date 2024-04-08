@@ -4,6 +4,19 @@ namespace ConsoleApp1
 {
     public class Program
     {
+
+        // -- FUNCTIONS --
+
+        static void PrintArray(int[] intArray, string mess)
+        {
+            foreach(int k in intArray)
+            {
+                Console.WriteLine("{0}: {1}", mess, k);
+            }
+        }
+
+        // -- END OF FUNCTIONS
+
         static void Main(string[] args)
         {
             int[] favNums = new int[3];
@@ -39,9 +52,41 @@ namespace ConsoleApp1
                 }
                 Console.WriteLine();
             }
-            
+
+            Console.WriteLine("--------");
+
+            int[] randNums = { 1, 4, 9, 2 };
+            PrintArray(randNums, "ForEach");
+
+            Console.WriteLine("--------");
+
+            Array.Sort(randNums); // [1, 2, 4, 9]
+            Array.Reverse(randNums); // [9, 4, 2, 1]
+
+            Console.WriteLine("1 at index: {0}", Array.IndexOf(randNums, 1));
+
+            randNums.SetValue(0, 1);
+
+            // copy array
+            int[] srcArray = { 1, 2, 3 };
+            int[] destArray = new int[2];
+            int startInd = 0;
+            int length = 2;
 
             
+            Array.Copy(srcArray, startInd, destArray, 0, length);
+            PrintArray(destArray, "Copy");
+
+            Console.WriteLine();
+
+            // another way to create array
+            Array anotherArray = Array.CreateInstance(typeof(int), 10);
+            srcArray.CopyTo(anotherArray, 5);
+            foreach(int m in anotherArray)
+            {
+                Console.WriteLine("CopyTo: {0} ", m);
+            }
+
         }
     }
 }
