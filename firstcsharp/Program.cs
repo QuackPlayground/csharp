@@ -14,17 +14,25 @@ namespace ConsoleApp1
         // <Access Specifier> <Return Type> <Method Name> (Parameters)
         // { <Body> } 
 
-        static void PrintInfo(string name, int zipCode)
+        static double GetSum2(double x = 1, double y = 1)
         {
-            Console.WriteLine("{0} lives in the zip code {1}",  name, zipCode);
+            return x + y;
         }
-        
+
+        static double GetSum2(string x = "1", string y = "1")
+        {
+            double dblX = Convert.ToDouble(x);
+            double dblY = Convert.ToDouble(y);
+            return dblX + dblY;
+        }
+
 
         // -- END OF FUNCTIONS
 
         static void Main(string[] args)
         {
-            PrintInfo(zipCode: 15417, name: "Pocky Poem");
+            Console.WriteLine("5.0 + 4.5 = {0}", GetSum2(5.0, 4.5));
+            Console.WriteLine("5.0 + 4.0 = {0}", GetSum2("5.0", "4.0"));
         }
     }
 }
