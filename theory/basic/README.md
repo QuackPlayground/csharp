@@ -35,7 +35,7 @@
     * Override Method
 20. [Abstract Classes / Methods](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/20.md)
     * Polymorphism
-
+21. [Interfaces](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/21.md)
 
 
 [continue ->](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/01.md)
