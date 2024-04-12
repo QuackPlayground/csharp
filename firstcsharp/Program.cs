@@ -11,28 +11,28 @@ namespace ConsoleApp1
     {
 
         // -- FUNCTIONS --
-        // <Access Specifier> <Return Type> <Method Name> (Parameters)
-        // { <Body> } 
-
-        static double GetSum2(double x = 1, double y = 1)
-        {
-            return x + y;
-        }
-
-        static double GetSum2(string x = "1", string y = "1")
-        {
-            double dblX = Convert.ToDouble(x);
-            double dblY = Convert.ToDouble(y);
-            return dblX + dblY;
-        }
 
 
         // -- END OF FUNCTIONS
 
         static void Main(string[] args)
         {
-            Console.WriteLine("5.0 + 4.5 = {0}", GetSum2(5.0, 4.5));
-            Console.WriteLine("5.0 + 4.0 = {0}", GetSum2("5.0", "4.0"));
+            DateTime awesomeDate = new DateTime(1974, 12, 21);
+            Console.WriteLine("Day of the week: {0}",
+                awesomeDate.DayOfWeek);
+
+            // change value
+            awesomeDate = awesomeDate.AddDays(4);
+            awesomeDate = awesomeDate.AddMonths(1);
+            awesomeDate = awesomeDate.AddYears(1);
+
+            Console.WriteLine("New Date: {0}",
+                awesomeDate.Date);
+
+            // Timespan to define a time
+            TimeSpan lunchTime = new TimeSpan(12, 30, 0);
+            lunchTime = lunchTime.Subtract(new TimeSpan(0, 15, 0));
+            Console.WriteLine("New Time: {0}", lunchTime.ToString());
         }
     }
 }
