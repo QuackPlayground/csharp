@@ -11,6 +11,7 @@
 7. [While, Do While](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/07.md)
 8. [Exception Handling](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/08.md)
 9. [StringBuilder](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/09.md)
+10. [Access Specifier](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/10.md)
 
 
 
