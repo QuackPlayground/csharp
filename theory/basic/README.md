@@ -25,6 +25,7 @@
     * Nullable Types
 17. [Getter / Setter](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/17.md)
     * Basic Getter / Setter
+    * Getters / Setters Properties
 
 
 

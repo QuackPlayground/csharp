@@ -63,5 +63,28 @@ namespace firstcsharp
             return name;
         }
 
+        public string Sound
+        {
+            get { return sound; }
+            set
+            {
+                if (value.Length > 10)
+                {
+                    sound = "No Sound";
+                    Console.WriteLine("Sound is too long");
+                } else
+                {
+                    sound = value;
+                }
+            }
+        }
+
+        public string Owner { get; set; } = "No Owner";
+
+        public static int numOfAnimals
+        {
+            get { return numOfAnimals; }
+            set { numOfAnimals += value;  }
+        }
     }
 }
