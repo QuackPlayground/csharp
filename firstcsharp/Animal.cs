@@ -9,10 +9,25 @@ namespace firstcsharp
     class Animal
     {
         private string name;
-        private string sound;
-        public static int numOfAnimals = 0;
-        public const string SHELTER = "Pocky's Home for Animals";
-        public readonly int idNum;
+        protected string sound;
+
+        protected AnimalIDInfo animalIdInfo = new AnimalIDInfo();
+
+        public void SetAnimalIDInfo(int idNum, string owner)
+        {
+            animalIdInfo.IDNumber = idNum;
+            animalIdInfo.Owner = owner;
+        }
+
+        public void GetAnimalIDInfo()
+        {
+            Console.WriteLine($"{Name} has the ID of {animalIdInfo.IDNumber} and is owned by {animalIdInfo.Owner}");
+        }
+
+        public virtual void MakeSound()
+        {
+            Console.WriteLine($"{Name} says {Sound}");
+        }
 
         // constructor chaining
         public Animal() : this("No Name", "No Sound") { } // default animal if nothing set
@@ -21,42 +36,22 @@ namespace firstcsharp
 
         public Animal(string name, string sound)
         {
-            SetName(name);
+            Name = name;
             Sound = sound;
-
-            NumOfAnimals = 1;
-
-            // define readonly value
-            Random rnd = new Random();
-            idNum = rnd.Next(1, 2147483640);
         }
 
-        // method
-        public void MakeSound()
+        public string Name
         {
-            Console.WriteLine("{0} says {1}", name, sound);
-        }
-
-        public static int GetNumAnimals()
-        {
-            return numOfAnimals;
-        }
-
-        public void SetName(string name)
-        {
-            // check, if there's no digit than set the name
-            if (!name.Any(char.IsDigit)) {
-                this.name = name;
-            } else
+            get { return name; }
+            set
             {
-                this.name = "No Name";
-                Console.WriteLine("Name can't contain numbers");
+                if (value.Any(char.IsDigit))
+                {
+                    name = "No Name";
+                    Console.WriteLine("Can't use numbers in name");
+                }
+                name = value;
             }
-        }
-
-        public string GetName()
-        {
-            return name;
         }
 
         public string Sound
@@ -75,12 +70,20 @@ namespace firstcsharp
             }
         }
 
-        public string Owner { get; set; } = "No Owner";
-
-        public static int NumOfAnimals
+        public class AnimalHealth
         {
-            get { return numOfAnimals; }
-            set { numOfAnimals += value;  }
+            public bool HealthyWeight(double height, double weight)
+            {
+                double calc = height / weight;
+                if ((calc >= .18) && (calc <= .27))
+                {
+                    return true;
+                }
+                else return false;
+            }
         }
+
+        
+
     }
 }

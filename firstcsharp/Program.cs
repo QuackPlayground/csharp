@@ -19,21 +19,51 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            Animal cat = new Animal();
-            cat.SetName("Whiskers");
-            cat.Sound = "Meow";
-            Console.WriteLine("The cat is name {0} and says {1}",
-                cat.GetName(), cat.Sound);
-            cat.Owner = "Naufal";
-            Console.WriteLine("{0} owner is {1}",
-                cat.GetName(), cat.Owner);
+            Animal whiskers = new Animal()
+            {
+                Name = "Whiskers",
+                Sound = "Meow"
+            };
 
-            Console.WriteLine("{0} shelter id is {1}",
-                cat.GetName(), cat.idNum);
+            Dog grover = new Dog()
+            {
+                Name = "Grover",
+                Sound = "Woof",
+                Sound2 = "Grrrr"
+            };
 
-            Console.WriteLine("# of animals: {0}",
-                Animal.NumOfAnimals);
+            grover.Sound = "Wooooof";
 
+            whiskers.MakeSound();
+            grover.MakeSound();
+
+            whiskers.SetAnimalIDInfo(12345, "Sally Smith");
+            grover.SetAnimalIDInfo(12346, "Paul Brown");
+
+            whiskers.GetAnimalIDInfo();
+
+            // inner class test
+            Animal.AnimalHealth getHealth = new Animal.AnimalHealth();
+
+            Console.WriteLine("Is my animal healthy: {0}",
+                getHealth.HealthyWeight(11, 46));
+
+            Animal monkey = new Animal()
+            {
+                Name = "Happy",
+                Sound = "Eeeeee"
+            };
+
+            Animal spot = new Dog()
+            {
+                Name = "Spot",
+                Sound = "Wooooffff",
+                Sound2 = "Geeeerrrr"
+            };
+
+            spot.MakeSound();
+            
+            
         }
 
     }

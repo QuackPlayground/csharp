@@ -29,6 +29,10 @@
 18. [Public / Private / Protected](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/18.md)
     * `readonly`
     * constructor chaining 
+19. [Inheritance](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/19.md)
+    * `virtual`
+    * Inner Class
+    * Override Method
 
 
 
