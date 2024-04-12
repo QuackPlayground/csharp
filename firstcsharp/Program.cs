@@ -19,74 +19,66 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            int[] favNums = new int[3];
-            favNums[0] = 23;
-            Console.WriteLine("favNum at index 0: {0}", favNums[0]);
+            // Relational Operators: > < >= <= == !=
+            // Logical Operators: && || !
 
-            string[] customers = { "Bob", "Sally", "Sue" };
-            var employees = new[] { "Mike", "Paul", "Rick" };
-
-            // array for different types with object
-            object[] randomArray = { "Paul", 45, 1.234 };
-
-            Console.WriteLine("randomArray 0: {0}", randomArray[0].GetType());
-            Console.WriteLine("Array Size: {0}", randomArray.Length);
-
-            for (int j = 0; j < randomArray.Length; j++)
+            int age = 23;
+            if ((age >= 5) && (age <= 7))
             {
-                Console.WriteLine("Array: {0}, Value: {1}", j, randomArray[j]);
+                Console.WriteLine("Go to elementary school");
             }
 
-            Console.WriteLine("------------------");
-
-            // multidimensional array
-            string[,] custNames = new string[2, 2] { { "Bob", "Smaith" }, { "Sally", "Smith" } };
-
-            Console.WriteLine("MD Value: {0}", custNames.GetValue(0, 1));
-
-            for (int j = 0; j < custNames.GetLength(0); j++)
+            if ((age >= 7) && (age < 13))
             {
-                for (int k = 0; k < custNames.GetLength(0); k++)
-                {
-                    Console.WriteLine("{0} ", custNames[j, k]);
-                }
-                Console.WriteLine();
+                Console.WriteLine("Go to middle school");
             }
 
-            Console.WriteLine("--------");
-
-            int[] randNums = { 1, 4, 9, 2 };
-            PrintArray(randNums, "ForEach");
-
-            Console.WriteLine("--------");
-
-            Array.Sort(randNums); // [1, 2, 4, 9]
-            Array.Reverse(randNums); // [9, 4, 2, 1]
-
-            Console.WriteLine("1 at index: {0}", Array.IndexOf(randNums, 1));
-
-            randNums.SetValue(0, 1);
-
-            // copy array
-            int[] srcArray = { 1, 2, 3 };
-            int[] destArray = new int[2];
-            int startInd = 0;
-            int length = 2;
+            if ((age >= 13) && (age < 19))
+            {
+                Console.WriteLine("Go to high school");
+            } else
+            {
+                Console.WriteLine("Go to College");
+            }
 
             
-            Array.Copy(srcArray, startInd, destArray, 0, length);
-            PrintArray(destArray, "Copy");
-
-            Console.WriteLine();
-
-            // another way to create array
-            Array anotherArray = Array.CreateInstance(typeof(int), 10);
-            srcArray.CopyTo(anotherArray, 5);
-            foreach(int m in anotherArray)
+            if ((age < 14) || (age > 67))
             {
-                Console.WriteLine("CopyTo: {0} ", m);
+                Console.WriteLine("You shouldn't work");
             }
 
+            Console.WriteLine("! true = " + (!true));
+
+            bool canDrive = age >= 16 ? true : false;
+            
+            switch (age)
+            {
+                case 1:
+                case 2:
+                    Console.WriteLine("Go to Day Care");
+                    break;
+                case 3:
+                case 4:
+                    Console.WriteLine("Go to Preschool");
+                    break;
+                case 5:
+                    Console.WriteLine("Go to Kindergarten");
+                    break;
+                default:
+                    Console.WriteLine("Go to another school");
+                    goto OtherSchool;
+            }
+
+        OtherSchool:
+            Console.WriteLine("Elementary, Middle, High School");
+
+            string name2 = "Derek";
+            string name3 = "Derek";
+
+            if (name2.Equals(name3, StringComparison.Ordinal))
+            {
+                Console.WriteLine("Names are equal");
+            }
         }
     }
 }
