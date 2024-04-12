@@ -33,6 +33,8 @@
     * `virtual`
     * Inner Class
     * Override Method
+20. [Abstract Classes / Methods](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/20.md)
+    * Polymorphism
 
 
 
