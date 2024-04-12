@@ -9,6 +9,7 @@
 5. [Arrays, For Loops, MD Array, Function Basics, ForEach](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/05.md)
 6. [If/Else/Else If, Switch](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/06.md)
 7. [While, Do While](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/07.md)
+8. [Exception Handling](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/08.md)
 
 
 
