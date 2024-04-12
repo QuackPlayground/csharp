@@ -12,7 +12,7 @@
 8. [Exception Handling](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/08.md)
 9. [StringBuilder](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/09.md)
 10. [Access Specifier](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/10.md)
-11. [Out Parameter](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/11.md)
+11. [Out Parameter, Pass By Reference](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/11.md)
 
 
 
