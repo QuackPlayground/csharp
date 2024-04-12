@@ -26,6 +26,9 @@
 17. [Getter / Setter](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/17.md)
     * Basic Getter / Setter
     * Getters / Setters Properties
+18. [Public / Private / Protected](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/18.md)
+    * `readonly`
+    * constructor chaining 
 
 
 
