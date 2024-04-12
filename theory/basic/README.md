@@ -13,6 +13,7 @@
 9. [StringBuilder](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/09.md)
 10. [Access Specifier](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/10.md)
 11. [Out Parameter, Pass By Reference](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/11.md)
+12. [Passing Unknown Number of Parameters](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/12.md)
 
 
 
