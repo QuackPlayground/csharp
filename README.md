@@ -12,6 +12,8 @@ Just a repo contains of my speedrun journey to quick deep dive in C#'s things
 * [C# Collections - Code](https://github.com/QuackPlayground/csharp/tree/main/collections)
     * [ArrayList - Code](https://github.com/QuackPlayground/csharp/tree/main/collections/LearnArrayList)
     * [Dictionaries - Code](https://github.com/QuackPlayground/csharp/tree/main/collections/LearnDictionaries)
+    * [Queues - Code](https://github.com/QuackPlayground/csharp/tree/main/collections/LearnQueues)
+    * [Stacks - Code](https://github.com/QuackPlayground/csharp/tree/main/collections/LearnStacks)
 
 
 
