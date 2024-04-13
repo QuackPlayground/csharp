@@ -24,3 +24,6 @@ Just a repo contains of my speedrun journey to quick deep dive in C#'s things
 
 
 > Enjoy this repo and hopefully it's useful. Feel free to contact me via email if you have any feedback or other useful information regarding C# or another tech stack. 🤓
+
+
+### If you find this repo useful, please give a star to this repo 🌟 and follow [me](https://github.com/pockypoem) on GitHub for more contents like this 😌.</h3>
