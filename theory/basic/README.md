@@ -51,6 +51,7 @@
 ## C# Collections
 24. [Array List](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/24.md)
 25. [Dictionaries](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/25.md)
+26. [Queues](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/26.md)
 
 
 
