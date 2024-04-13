@@ -105,6 +105,10 @@ Kalau misal kita mau ganti ke radio, tinggal ganti 1 baris aja menjadi: `IElectr
 
 > Dalam contoh tersebut, kita menggunakan Factory Pattern dengan metode `GetDevice` untuk membuat objek `IElectronicDevice`. Dengan pendekatan ini, kita dapat dengan mudah mengganti perangkat yang ingin kita gunakan hanya dengan mengubah parameter yang dilewatkan ke `GetDevice`, tanpa harus merubah kode yang digunakan untuk mengoperasikan perangkat.
 
+<br>
+
+[Factory Pattern Article](https://refactoring.guru/design-patterns/factory-method)
+
 
 [<- back](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/22.md)
 [continue ->](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/23.md)
