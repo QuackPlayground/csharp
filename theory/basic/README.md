@@ -49,6 +49,7 @@
 23. [Warriors Fight to the Death](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/23.md)
 
 ## C# Collections
+24. [Array List](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/24.md)
 
 
 
