@@ -2,6 +2,9 @@
 
 
 # Table Of Contents
+
+## Basic C#
+
 1. [Console Methods](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/01.md)
 2. [Receive User Input, Variables, Data Types](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/02.md)
 3. [Casting, Formatting Output](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/03.md)
@@ -11,6 +14,8 @@
 7. [While, Do While](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/07.md)
 8. [Exception Handling](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/08.md)
 9. [StringBuilder](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/09.md)
+
+## OOP Deep Dive
 10. [Access Specifier](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/10.md)
 11. [Out Parameter, Pass By Reference](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/11.md)
 12. [Passing Unknown Number of Parameters](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/12.md)
@@ -36,9 +41,15 @@
 20. [Abstract Classes / Methods](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/20.md)
     * Polymorphism
 21. [Interfaces](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/21.md)
+
+## OOP Example Projects
+
 22. [Complex OOP Example](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/22.md)
     * [Example of Factory Pattern](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/22-part2.md)
 23. [Warriors Fight to the Death](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/23.md)
+
+## C# Collections
+
 
 
 [continue ->](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/01.md)
