@@ -38,6 +38,7 @@
 21. [Interfaces](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/21.md)
 22. [Complex OOP Example](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/22.md)
     * [Example of Factory Pattern](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/22-part2.md)
+23. [Warriors Fight to the Death](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/23.md)
 
 
 [continue ->](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/01.md)
