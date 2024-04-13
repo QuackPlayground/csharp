@@ -15,7 +15,7 @@ Just a repo contains of my speedrun journey to quick deep dive in C#'s things
 
 
 
-## Sauce
+## "Sauce" 🥫
 * [Derek Barnas C# Tutorial](https://youtu.be/M5ugY7fWydE?si=RItpFZkv9781-JTN)
 * [C# Official Documentation](https://learn.microsoft.com/en-us/dotnet/csharp/)
 * ChatGPT for better understanding 😆
