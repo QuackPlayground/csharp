@@ -28,6 +28,20 @@ namespace csharpfeat03
 
             Box box4 = (Box)4;
             Console.WriteLine($"Box 4: {box4}");
+
+
+            // Anonymous Types
+            // no need to create class and define the data types of objects
+            var shopkins = new { Name = "Shopkins", Price = 4.99 };
+            Console.WriteLine("{0} cost ${1}", shopkins.Name, shopkins.Price );
+
+            // anonymous types can be store in array
+            var toyArray = new[] { 
+                new {Name="Yo-Kai Pack", Price= 4.59 },
+                new {Name="Lego", Price=5.99}
+            };
+
+            foreach(var item in toyArray) Console.WriteLine("{0} cost ${1}", item.Name, item.Price);
         }
     }
 }
