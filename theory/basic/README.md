@@ -54,6 +54,9 @@
 26. [Queues](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/26.md)
 27. [Stacks](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/27.md)
 
+## Advanced Topics 🤔
+28. [Generics](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/28.md)
+
 
 
 [continue ->](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/01.md)
