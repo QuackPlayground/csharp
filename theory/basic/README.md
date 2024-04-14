@@ -66,6 +66,8 @@
     * [Anonymous Types](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/33.md)
     * [LinQ](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/34.md)
 
+32. [Threads](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/35.md)
+
 
 
 [continue ->](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/01.md)
