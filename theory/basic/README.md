@@ -55,7 +55,8 @@
 27. [Stacks](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/27.md)
 
 ## Advanced Topics 🤔
-28. [Generics](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/28.md)
+28. [Generics](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/28.md) 
+    * Delegates
 
 
 

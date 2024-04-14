@@ -43,6 +43,18 @@ namespace LearnGeneric
             Console.WriteLine(rect2.GetArea());
 
 
+            // Delegates
+            Arithmetic add, sub, addSub; // you can stack this and execute them in order
+            add = new Arithmetic(Add);
+            sub = new Arithmetic(Substract);
+            addSub = add + sub;
+
+            Console.WriteLine($"Add {6} & {10}");
+            add(6, 10);
+            Console.WriteLine($"Add & Substract {10} & {4}");
+            addSub(10, 4);
+
+
 
         }
 
@@ -78,5 +90,18 @@ namespace LearnGeneric
             }
 
         }
+
+        public delegate void Arithmetic(double num1, double num2);
+
+        public static void Add(double num1, double num2)
+        {
+            Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+        }
+
+        public static void Substract(double num1, double num2)
+        {
+            Console.WriteLine($"{num1} - {num2} = {num1 - num2}");
+        }
+
     }
 }
