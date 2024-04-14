@@ -14,6 +14,28 @@ Just a repo contains of my speedrun journey to quick deep dive in C#'s things
     * [Dictionaries - Code](https://github.com/QuackPlayground/csharp/tree/main/collections/LearnDictionaries)
     * [Queues - Code](https://github.com/QuackPlayground/csharp/tree/main/collections/LearnQueues)
     * [Stacks - Code](https://github.com/QuackPlayground/csharp/tree/main/collections/LearnStacks)
+* Next Level Topics
+    * [Generics & Delegates - Code](https://github.com/QuackPlayground/csharp/tree/main/nextlevelTopics/LearnGenerics)
+    * C# Features
+        * Lambda
+        * Where
+        * Select
+        * Range
+        * Zip
+        * Aggregate
+        * Average
+        * All
+        * Any
+        * Distinct
+        * Except
+        * Intersect
+        * IEnumerator
+        * Operator Overloading
+        * Anonymous Types
+        * LinQ
+        * Threads
+        * Directory Functions
+
 
 
 
