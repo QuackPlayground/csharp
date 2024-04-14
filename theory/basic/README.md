@@ -61,6 +61,7 @@
 29. [Lambda](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/29.md) 
     * `.Where`
 30. [`.Select`, `.Zip`, `Range`, `Aggregate`, `Average`, `All`, `Any`, `Distinct`, `.Except`, `.Intersect`](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/30.md) 
+31. [IEnumerator](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/31.md) 
 
 
 
