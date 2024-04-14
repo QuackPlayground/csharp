@@ -9,21 +9,24 @@ namespace csharpfeat03
     {
         static void Main(string[] args)
         {
-            ArrayList famAnimals = new ArrayList()
+            ArrayList animalList = new ArrayList()
             {
-                new Animal {Name="Heidi", Height= .8, Weight=18},
-                new Animal {Name="Shrek", Height=4, Weight=130},
-                new Animal {Name="Congo", Height=3.8, Weight=90}
+                new Animal {Name="German Shephard", Height= 25, Weight=77},
+                new Animal {Name="Chihuahua", Height=7, Weight=4.4},
+                new Animal {Name="Saint Bernard", Height=30, Weight=200}
             };
 
-            var famAnimalEnum = famAnimals.OfType<Animal>();
+            var animalListEnum = animalList.OfType<Animal>();
 
-            var smAnimals = from animal in famAnimalEnum
-                            where animal.Weight <= 90
-                            orderby animal.Name
-                            select animal;
+            var bigDogs = from dog in animalListEnum
+                          where (dog.Weight > 70) &&
+                          (dog.Height > 25)
+                          orderby dog.Name
+                          select dog;
+
             
-            foreach(var animal in smAnimals ) Console.WriteLine("{0} weights {1}lbs", animal.Name, animal.Weight);
+            
+            foreach(var animal in bigDogs ) Console.WriteLine("{0} weights {1}lbs", animal.Name, animal.Weight);
         }
     }
 }
