@@ -17,8 +17,7 @@ Just a repo contains of my speedrun journey to quick deep dive in C#'s things
 * Next Level Topics
     * [Generics & Delegates - Code](https://github.com/QuackPlayground/csharp/tree/main/nextlevelTopics/LearnGenerics)
     * C# Features
-        * Lambda
-        * Where
+        * [Lambda & `.Where` - Code](https://github.com/QuackPlayground/csharp/tree/main/nextlevelTopics/csharpfeat01)
         * Select
         * Range
         * Zip

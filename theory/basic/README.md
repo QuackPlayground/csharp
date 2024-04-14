@@ -57,6 +57,8 @@
 ## Advanced Topics 🤔
 28. [Generics](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/28.md) 
     * Delegates
+29. [Lambda](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/29.md) 
+    * `.Where`
 
 
 
