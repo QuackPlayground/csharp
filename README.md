@@ -19,8 +19,7 @@ Just a repo contains of my speedrun journey to quick deep dive in C#'s things
     * C# Features
         * [Lambda & `.Where` - Code](https://github.com/QuackPlayground/csharp/tree/main/nextlevelTopics/csharpfeat01)
         * [`.Select`, `.Zip`, `Range`, `Aggregate`, `Average`, `All`, `Any`, `Distinct`, `.Except`, `.Intersect`](https://github.com/QuackPlayground/csharp/tree/main/nextlevelTopics/csharpfeat02)
-        * [IEnumerator, Operator Overloading & Anonymous Types](https://github.com/QuackPlayground/csharp/tree/main/nextlevelTopics/csharpfeat03)
-        * LinQ
+        * [IEnumerator, Operator Overloading, Anonymous Types, LINQ](https://github.com/QuackPlayground/csharp/tree/main/nextlevelTopics/csharpfeat03)
         * Threads
         * Directory Functions
 
