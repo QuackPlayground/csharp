@@ -14,16 +14,30 @@ namespace csharpfeat04
 
         static void Main(string[] args) 
         {
-            int num = 1;
+            BankAcct acct = new BankAcct(10);
+            Thread[] threads = new Thread[15];
 
-            for (int i = 0; i < 10; i++) 
-            { 
-                Console.WriteLine(num);
-                Thread.Sleep(1000); // pause 1s
-                num++;
+            Thread.CurrentThread.Name = "main"; // Memberi nama thread utama (main) sebagai "main".
+
+            // Loop untuk membuat 15 thread baru.
+            for (int i = 0; i < 15; i++)
+            {
+                Thread t = new Thread(new ThreadStart(acct.IssueWithdraw));
+                t.Name = i.ToString(); // Memberi nama thread sesuai dengan indeksnya dalam loop.
+                threads[i] = t;
             }
 
-            Console.WriteLine("Thread Ends");
+            // Loop untuk memulai dan menampilkan status 15 thread yang telah dibuat.
+            for (int i = 0; i < 15; i++)
+            {
+                Console.WriteLine("Thread {0} Alive: {1}", threads[i].Name, threads[i].IsAlive); // Menampilkan status (hidup/mati) dari thread dengan nama dan status IsAlive yang sesuai.
+                threads[i].Start(); // Memulai eksekusi thread.
+
+                Console.WriteLine("Thread {0} Alive: {1}", threads[i].Name, threads[i].IsAlive); // Menampilkan status setelah thread dimulai.
+            }
+
+            Console.WriteLine("Current Priority: {0}", Thread.CurrentThread.Priority); // Menampilkan prioritas thread utama.
+            Console.WriteLine("Thread {0} Ending", Thread.CurrentThread.Name); // Menampilkan bahwa thread utama telah selesai.
         }
     }
 }
