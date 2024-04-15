@@ -71,6 +71,7 @@
 ## File I/O & Serialization
 33. [Directory Functions](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/36.md)
 34. [File I/O](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/37.md)
+34. [File Streams](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/38.md)
 
 
 

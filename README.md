@@ -24,6 +24,7 @@ Just a repo contains of my speedrun journey to quick deep dive in C#'s things
     * File I/O & Serialization
         * [Directory Functions](https://github.com/QuackPlayground/csharp/tree/main/fileio-serialization/chapter01)
         * [File I/O](https://github.com/QuackPlayground/csharp/tree/main/fileio-serialization/chapter01)
+        * [FileStreams](https://github.com/QuackPlayground/csharp/tree/main/fileio-serialization/chapter02)
 
 
 
