@@ -23,6 +23,7 @@ Just a repo contains of my speedrun journey to quick deep dive in C#'s things
         * [Threads](https://github.com/QuackPlayground/csharp/tree/main/nextlevelTopics/csharpfeat04)
     * File I/O & Serialization
         * [Directory Functions](https://github.com/QuackPlayground/csharp/tree/main/fileio-serialization/chapter01)
+        * [File I/O](https://github.com/QuackPlayground/csharp/tree/main/fileio-serialization/chapter01)
 
 
 
