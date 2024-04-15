@@ -12,23 +12,18 @@ namespace csharpfeat04
     public class Program
     {
 
-        static void Print1()
-        {
-            for (int i = 0; i < 1000; i++) 
-            {
-                Console.Write(1);
-            }
-        }
-
         static void Main(string[] args) 
         {
-            Thread t = new Thread(Print1);
-            t.Start(); // try to print thousand of 1
+            int num = 1;
 
-            for (int i = 0; i < 1000; i++)
-            {
-                Console.Write(0);
+            for (int i = 0; i < 10; i++) 
+            { 
+                Console.WriteLine(num);
+                Thread.Sleep(1000); // pause 1s
+                num++;
             }
+
+            Console.WriteLine("Thread Ends");
         }
     }
 }
