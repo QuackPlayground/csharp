@@ -28,6 +28,7 @@ Just a repo contains of my speedrun journey to quick deep dive in C#'s things
         * [StreamWriter / StreamReader](https://github.com/QuackPlayground/csharp/tree/main/fileio-serialization/chapter02)
         * [BinaryWriter / BinaryReader](https://github.com/QuackPlayground/csharp/tree/main/fileio-serialization/chapter02)
         * [Serialization](https://github.com/QuackPlayground/csharp/tree/main/fileio-serialization/chapter03)
+        * [XmlSerializer](https://github.com/QuackPlayground/csharp/tree/main/fileio-serialization/chapter03)
 
 
 

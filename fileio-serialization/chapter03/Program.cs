@@ -17,28 +17,35 @@ namespace Chapter03
     {
         static void Main(string[] args)
         {
-            Animal bowser = new Animal("Bowser", 45, 25, 1);
-            Stream stream = File.Open("AnimalData.dat",
-                FileMode.Create);
 
-            BinaryFormatter bf = new BinaryFormatter();
+            // collection of animal
+            List<Animal> theAnimals = new List<Animal>
+            {
+                new Animal("Mario", 60, 30, 2),
+                new Animal("Luigi", 55, 24, 3),
+                new Animal("Peach", 40, 20, 4)
+            };
 
-            bf.Serialize(stream, bowser); // send object data to file
-            stream.Close();
+            using (Stream fs = new FileStream(@"D:\ngulik\QuackPlayground\csharp\fileio-serialization\dummycsharp01\animals.xml",
+                FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                XmlSerializer serializer2 = new XmlSerializer(typeof(List<Animal>));
+                serializer2.Serialize(fs, theAnimals);
+            }
 
-            // delete our data
-            bowser = null;
+            theAnimals = null;
 
-            // read object data from file
-            stream = File.Open("AnimalData.dat",
-                FileMode.Open);
-            bf = new BinaryFormatter();
+            XmlSerializer serializer3 = new XmlSerializer(typeof(List<Animal>));
 
-            bowser = (Animal)bf.Deserialize(stream);
-            stream.Close();
+            using (FileStream fs2 = File.OpenRead(@"D:\ngulik\QuackPlayground\csharp\fileio-serialization\dummycsharp01\animals.xml"))
+            {
+                theAnimals = (List<Animal>)serializer3.Deserialize(fs2);
+            }
 
-            Console.WriteLine(bowser.ToString());
-
+            foreach(Animal a in theAnimals)
+            {
+                Console.WriteLine(a.ToString());
+            }
         }
     }
 }
