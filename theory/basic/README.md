@@ -68,6 +68,9 @@
 
 32. [Threads](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/35.md)
 
+## File I/O & Serialization
+33. [Directory Functions](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/36.md)
+
 
 
 [continue ->](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/01.md)

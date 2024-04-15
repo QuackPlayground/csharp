@@ -21,7 +21,8 @@ Just a repo contains of my speedrun journey to quick deep dive in C#'s things
         * [`.Select`, `.Zip`, `Range`, `Aggregate`, `Average`, `All`, `Any`, `Distinct`, `.Except`, `.Intersect`](https://github.com/QuackPlayground/csharp/tree/main/nextlevelTopics/csharpfeat02)
         * [IEnumerator, Operator Overloading, Anonymous Types, LINQ](https://github.com/QuackPlayground/csharp/tree/main/nextlevelTopics/csharpfeat03)
         * [Threads](https://github.com/QuackPlayground/csharp/tree/main/nextlevelTopics/csharpfeat04)
-        * Directory Functions
+    * File I/O & Serialization
+        * [Directory Functions](https://github.com/QuackPlayground/csharp/tree/main/fileio-serialization/chapter01)
 
 
 
