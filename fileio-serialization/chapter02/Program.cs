@@ -14,28 +14,26 @@ namespace Chapter02
     {
         static void Main(string[] args)
         {
-            // FileStream to read an array of byte
-            string textFilePath2 = @"D:\ngulik\QuackPlayground\csharp\fileio-serialization\dummycsharp01\testfile2.txt";
-            FileStream fs = File.Open(textFilePath2,FileMode.Create); // membuka FileStream untuk menulis ke file
+            
+            string textFilePath3 = @"D:\ngulik\QuackPlayground\csharp\fileio-serialization\dummycsharp01\testfile3.txt";
+            StreamWriter sw = new StreamWriter(textFilePath3);
+            sw.Write("This is a random ");
+            sw.WriteLine("sentence.");
+            sw.WriteLine("This is another sentence.");
+            sw.Close(); 
 
-            string randString = "This is a random string";
-            byte[] rsByteArray = Encoding.Default.GetBytes(randString); // konversi string jadi array byte
+            // open file for reading
+            StreamReader sr = new StreamReader(textFilePath3);
+            Console.WriteLine("Peek: {0}",
+                Convert.ToChar(sr.Peek()));
 
-            fs.Write(rsByteArray, 0, rsByteArray.Length); // menulis array byte ke file
-            fs.Position = 0; // mengatur posisi FileStream kembali ke awal file
+            Console.WriteLine("1st String: {0}",
+                sr.ReadLine());
 
-
-            // baca array byte dari file
-            byte[] fileByteArray = new byte[rsByteArray.Length];
-
-            for(int i = 0; i < rsByteArray.Length; i++) 
-            {
-                fileByteArray[i] = (byte)fs.ReadByte();
-            }
-
-            // convert byte to string
-            Console.WriteLine(Encoding.Default.GetString(fileByteArray));
-            fs.Close();
+            Console.WriteLine("Everything Else: {0}",
+                sr.ReadToEnd());
+            sr.Close();
+            
         }
     }
 }
