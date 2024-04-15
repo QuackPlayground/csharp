@@ -15,24 +15,24 @@ namespace Chapter02
         static void Main(string[] args)
         {
             
-            string textFilePath3 = @"D:\ngulik\QuackPlayground\csharp\fileio-serialization\dummycsharp01\testfile3.txt";
-            StreamWriter sw = new StreamWriter(textFilePath3);
-            sw.Write("This is a random ");
-            sw.WriteLine("sentence.");
-            sw.WriteLine("This is another sentence.");
-            sw.Close(); 
+            string textFilePath4 = @"D:\ngulik\QuackPlayground\csharp\fileio-serialization\dummycsharp01\testfile4.txt";
+            FileInfo datFile = new FileInfo(textFilePath4);
+            BinaryWriter bw = new BinaryWriter(datFile.OpenWrite());
 
-            // open file for reading
-            StreamReader sr = new StreamReader(textFilePath3);
-            Console.WriteLine("Peek: {0}",
-                Convert.ToChar(sr.Peek()));
+            string randText = "Random Text";
+            int myAge = 47;
+            double height = 6.25;
+            bw.Write(randText);
+            bw.Write(myAge);
+            bw.Write(height);
+            bw.Close();
 
-            Console.WriteLine("1st String: {0}",
-                sr.ReadLine());
-
-            Console.WriteLine("Everything Else: {0}",
-                sr.ReadToEnd());
-            sr.Close();
+            BinaryReader br = new BinaryReader(datFile.OpenRead());
+            Console.WriteLine(br.ReadString()); 
+            Console.WriteLine(br.ReadInt32());
+            Console.WriteLine(br.ReadDouble());
+            br.Close();
+            
             
         }
     }

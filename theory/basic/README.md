@@ -73,6 +73,7 @@
 34. [File I/O](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/37.md)
 34. [File Streams](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/38.md)
 35. [StreamWriter / StreamReader](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/39.md)
+35. [BinaryWriter / BinaryReader](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/40.md)
 
 
 
