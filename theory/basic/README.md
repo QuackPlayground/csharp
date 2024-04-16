@@ -77,11 +77,15 @@
 38. [Serialization](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/41.md)
     * XmlSerializer
 
-## C# with Databases
+## C# with Databases (.Net to create WPF)
+
+> WPF (Windows Presentation Foundation) pada Visual Studio adalah kerangka kerja (framework) pengembangan aplikasi desktop yang digunakan untuk membuat antarmuka pengguna (UI) modern dalam aplikasi Windows.
+
 39. [Install SQL Server](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/42.md)
     * Setting Up Database
 40. [WPF / Database Big Project](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/43.md)
 41. [Design an Interface](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/44.md)
+42. [Reading From Database](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/45.md)
 
 
 
