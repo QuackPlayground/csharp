@@ -86,7 +86,8 @@
 40. [WPF / Database Big Project](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/43.md)
 41. [Design an Interface](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/44.md)
 42. [Reading From Database](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/45.md)
-42. [Add Data to Database](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/46.md)
+43. [Add Data to Database](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/46.md)
+44. [Delete Data to Database & Update Tables Automatically](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/47.md)
 
 
 
