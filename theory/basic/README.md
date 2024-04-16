@@ -77,7 +77,7 @@
 38. [Serialization](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/41.md)
     * XmlSerializer
 
-## C# with Databases (.Net to create WPF)
+## [C# Database] CRUD with Microsoft SQL Server (.Net to make GUI App)
 
 > WPF (Windows Presentation Foundation) pada Visual Studio adalah kerangka kerja (framework) pengembangan aplikasi desktop yang digunakan untuk membuat antarmuka pengguna (UI) modern dalam aplikasi Windows.
 
