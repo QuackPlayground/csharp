@@ -77,6 +77,9 @@
 38. [Serialization](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/41.md)
     * XmlSerializer
 
+## C# with Databases
+38. [Install SQL Server](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/42.md)
+
 
 
 [continue ->](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/01.md)
