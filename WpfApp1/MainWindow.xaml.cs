@@ -164,17 +164,105 @@ namespace WpfApp1
 
         private void AddStore(object sender, RoutedEventArgs e)
         {
+            // MessageBox.Show("AddStoreClicked");
+            try
+            {
+                // Add list of parameters using textbox names
+                // You also have to define data type
+                List<SqlParameter> parameters = new List<SqlParameter>() {
+                    new SqlParameter("@Name", SqlDbType.NVarChar){Value=storeName.Text},
+                    new SqlParameter("@Street", SqlDbType.NVarChar){Value=storeStreet.Text},
+                    new SqlParameter("@City", SqlDbType.NVarChar){Value= storeCity.Text},
+                    new SqlParameter("@State", SqlDbType.NChar){Value=storeState.Text},
+                    new SqlParameter("@Zip", SqlDbType.Int){Value = storeZip.Text},
+                };
 
+
+                // Make sure they are in the same order as the DB
+                string query = "INSERT INTO Store VALUES (@Name, @Street, @City, @State, @Zip)";
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlConnection.Open();
+
+
+                // Used to add a range of values
+                sqlCommand.Parameters.AddRange(parameters.ToArray());
+                DataTable storeTable = new DataTable();
+
+
+                // Abbreviated way to use adapter
+                using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand)) adapter.Fill(storeTable);
+
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.ToString());
+            } finally
+            {
+                sqlConnection.Close();
+                DisplayStores();
+            }
         }
 
         private void AddInventory(object sender, RoutedEventArgs e)
         {
-
+            // MessageBox.Show("Add Inventory Clicked");
+            try
+            {
+                // Will be defining variable values using the
+                // items selected in the list boxes
+                string query = "INSERT INTO StoreInventory VALUES(@StoreId, @ProductId)";
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlConnection.Open();
+                sqlCommand.Parameters.AddWithValue("@StoreId", storeList.SelectedValue);
+                sqlCommand.Parameters.AddWithValue("@ProductId", productList.SelectedValue);
+                sqlCommand.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            } finally
+            {
+                sqlConnection.Close();
+                DisplayStoreInventory();
+            }
         }
 
         private void AddProductClick(object sender, RoutedEventArgs e)
         {
+            // MessageBox.Show("AddProductClicked");
+            try
+            {
+                // Add list of parameters using textbox names
+                // You also have to define data type
+                List<SqlParameter> parameters = new List<SqlParameter>()
+                {
+                    new SqlParameter("@Manufacturer", SqlDbType.NVarChar) {Value = prodManu.Text},
+                    new SqlParameter("@Brand", SqlDbType.NVarChar) {Value=prodBrand.Text},
+                };
 
+                // Make sure they are in the same order as the DB
+                string query = "INSERT INTO Product VALUES (@Manufacturer, @Brand)";
+
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlConnection.Open();
+
+                // Used to add a range of values
+                sqlCommand.Parameters.AddRange(parameters.ToArray());
+
+                DataTable productTable = new DataTable();
+
+                // Abbreviated way to use adapter
+                using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand)) adapter.Fill(productTable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                sqlConnection.Close();
+                DisplayStoreInventory();
+            }
         }
 
         private void DeleteStore(object sender, RoutedEventArgs e)
