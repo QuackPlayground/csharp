@@ -41,6 +41,18 @@ namespace WpfApp1
             DisplayAllProducts();
         }
 
+        // Tambahkan variabel boolean untuk menandakan apakah pembaruan inventory harus dilakukan
+        private bool updateInventoryOnSelectionChange = true;
+
+        private void storeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Panggil DisplayStoreInventory hanya jika variabel updateInventoryOnSelectionChange true
+            if (updateInventoryOnSelectionChange)
+            {
+                DisplayStoreInventory();
+            }
+        }
+
         // Method that will display store names
         private void DisplayStores()
         {
@@ -78,11 +90,8 @@ namespace WpfApp1
             }
         }
 
-        // Double click the list box to generate this
-        private void storeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            DisplayStoreInventory();
-        }
+        
+
 
         // Displays the shoes the store has in inventory
         // Method that will display store names
@@ -167,6 +176,8 @@ namespace WpfApp1
             // MessageBox.Show("AddStoreClicked");
             try
             {
+                sqlConnection.Open();
+
                 // Add list of parameters using textbox names
                 // You also have to define data type
                 List<SqlParameter> parameters = new List<SqlParameter>(){
@@ -178,24 +189,22 @@ namespace WpfApp1
                 };
 
                 // Make sure they are in the same order as the DB
-                string query = "INSERT INTO Store VALUES (@Name, @Street, @City, @State, @Zip)";
+                string query = "INSERT INTO Store (Name, Street, City, State, Zip) VALUES (@Name, @Street, @City, @State, @Zip)";
 
                 SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-                sqlConnection.Open();
 
                 // Used to add a range of values
                 sqlCommand.Parameters.AddRange(parameters.ToArray());
 
-                DataTable storeTable = new DataTable();
-
-                // Abbreviated way to use adapter
-                using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand)) adapter.Fill(storeTable);
+                // Execute the INSERT command
+                sqlCommand.ExecuteNonQuery();
 
                 storeName.Text = "";
                 storeStreet.Text = "";
                 storeCity.Text = "";
                 storeState.Text = "";
                 storeZip.Text = "";
+
 
             }
             catch (Exception ex)
@@ -280,30 +289,48 @@ namespace WpfApp1
         {
             try
             {
-                string query = "DELETE FROM Store WHERE Id = @StoreId";
+                if (storeList.SelectedValue != null)
+                {
+                    // Nonaktifkan event SelectionChanged sementara
+                    storeList.SelectionChanged -= storeList_SelectionChanged;
 
-                // Simple way to execute a query without adapter
-                // Open and close on our own
-                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-                sqlConnection.Open();
+                    // Tambahkan konfirmasi penghapusan
+                    MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this store?", "Delete Store", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-                // Pass value for query
-                sqlCommand.Parameters.AddWithValue("@StoreId", storeList.SelectedValue);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        sqlConnection.Open();
 
-                // Execute query
-                sqlCommand.ExecuteScalar();
+                        string query = "DELETE FROM Store WHERE Id = @StoreId";
+
+                        SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                        sqlCommand.Parameters.AddWithValue("@StoreId", storeList.SelectedValue);
+
+                        sqlCommand.ExecuteNonQuery();
+
+                        // Set updateInventoryOnSelectionChange ke false setelah penghapusan store
+                        updateInventoryOnSelectionChange = false;
+
+                        // Tidak perlu memanggil DisplayStoreInventory() di sini karena toko sudah dihapus
+                        // DisplayStores() sudah memuat ulang daftar toko yang diperbarui
+                        DisplayStores();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select a store to delete.");
+                }
             }
             catch (Exception ex)
             {
-                // This throws an error because the store inventory
-                // list expects a default store selection
                 MessageBox.Show(ex.ToString());
             }
             finally
             {
+                // Aktifkan kembali event SelectionChanged
+                storeList.SelectionChanged += storeList_SelectionChanged;
+
                 sqlConnection.Close();
-                // Update the store listbox
-                DisplayStores();
             }
 
             // We need to update StoreInventory so that when a
@@ -312,36 +339,6 @@ namespace WpfApp1
             // Right Click -> StoreInventory in Server Explorer
             // Open Table Definition
             // Add ON DELETE CASCADE end of both Foreign Keys
-        }
-
-        private void DeleteInventory(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                string query = "DELETE FROM StoreInventory WHERE ProductId = @ProductId";
-
-                // Simple way to execute a query without adapter
-                // Open and close on our own
-                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
-                sqlConnection.Open();
-
-                // Pass value for query
-                sqlCommand.Parameters.AddWithValue("@ProductId", storeInventory.SelectedValue);
-
-                // Execute query
-                sqlCommand.ExecuteScalar();
-            }
-            catch (Exception ex)
-            {
-                // This throws an error because the store inventory
-                // list expects a default store selection
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                sqlConnection.Close();
-                DisplayStoreInventory();
-            }
         }
 
         private void DeleteProductClick(object sender, RoutedEventArgs e)
@@ -372,6 +369,36 @@ namespace WpfApp1
                 sqlConnection.Close();
                 // Update the store listbox
                 DisplayAllProducts();
+                DisplayStoreInventory();
+            }
+        }
+
+        private void DeleteInventory(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string query = "DELETE FROM StoreInventory WHERE ProductId = @ProductId";
+
+                // Simple way to execute a query without adapter
+                // Open and close on our own
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlConnection.Open();
+
+                // Pass value for query
+                sqlCommand.Parameters.AddWithValue("@ProductId", storeInventory.SelectedValue);
+
+                // Execute query
+                sqlCommand.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                // This throws an error because the store inventory
+                // list expects a default store selection
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                sqlConnection.Close();
                 DisplayStoreInventory();
             }
         }
