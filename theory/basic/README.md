@@ -78,7 +78,9 @@
     * XmlSerializer
 
 ## C# with Databases
-38. [Install SQL Server](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/42.md)
+39. [Install SQL Server](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/42.md)
+    * Setting Up Database
+40. [WPF / Database Big Project](https://github.com/QuackPlayground/csharp/blob/main/theory/basic/43.md)
 
 
 
